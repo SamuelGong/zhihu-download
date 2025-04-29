@@ -1,0 +1,15 @@
+2025-04-28 21:12:30,549 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:50000
+ * Running on http://192.168.1.53:50000
+2025-04-28 21:12:30,550 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2025-04-28 21:13:08,140 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:13:08] "GET /get-cookies HTTP/1.1" 200 -
+2025-04-28 21:13:08,153 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:13:08] "[33mGET /robots.txt?484957 HTTP/1.1[0m" 404 -
+2025-04-28 21:13:08,155 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:13:08] "GET /static/img/step1.png HTTP/1.1" 200 -
+2025-04-28 21:13:08,155 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:13:08] "GET /static/img/step2.png HTTP/1.1" 200 -
+2025-04-28 21:13:08,561 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:13:08] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 21:18:33,469 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:18:33] "GET / HTTP/1.1" 200 -
+2025-04-28 21:18:33,480 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:18:33] "[33mGET /robots.txt?484957 HTTP/1.1[0m" 404 -
+2025-04-28 21:18:34,111 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:18:34] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-04-28 21:19:11,647 - web_app - INFO - Successfully processed https://zhuanlan.zhihu.com/p/704347956, title: (20240619)同态加密超入门背景技术应用前沿_FounderOfZhihu
+2025-04-28 21:19:11,660 - werkzeug - INFO - 127.0.0.1 - - [28/Apr/2025 21:19:11] "POST / HTTP/1.1" 200 -

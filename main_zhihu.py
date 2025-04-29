@@ -12,7 +12,7 @@ from utils.util import insert_new_line, get_article_date, download_image, downlo
 
 
 class ZhihuParser:
-    def __init__(self, cookies, hexo_uploader=False, keep_logs=False):
+    def __init__(self, cookies, hexo_uploader=False, keep_logs=False, temp_dir=None, output_dir=None):
         self.hexo_uploader = hexo_uploader
         self.cookies = cookies
         self.session = requests.Session()
@@ -26,6 +26,10 @@ class ZhihuParser:
         self.session.headers.update(self.headers)
         self.soup = None
         self.logger = logging.getLogger('zhihu_parser')
+        
+        # Set temp and output directories
+        self.temp_dir = temp_dir
+        self.output_dir = output_dir
         
         if self.keep_logs:
             self.logger.setLevel(logging.INFO)
@@ -119,6 +123,10 @@ class ZhihuParser:
         else:
             markdown_title = f"{markdown_title}_{author}"
 
+        # Use output_dir if specified
+        if self.output_dir:
+            markdown_title = os.path.join(self.output_dir, markdown_title)
+
         if content_element is not None:
             # 将 css 样式移除
             for style_tag in content_element.find_all("style"):
@@ -156,7 +164,8 @@ class ZhihuParser:
                             img_path = img_path[:index + len(ext)]
                             break  # 找到第一个匹配的格式后就跳出循环
 
-                    img["src"] = img_path
+                    img_path_relative = f"{os.path.basename(markdown_title)}/{os.path.basename(img_path)}"
+                    img["src"] = img_path_relative
 
                     # 下载图片并保存到本地
                     os.makedirs(os.path.dirname(img_path), exist_ok=True)

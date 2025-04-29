@@ -62,7 +62,7 @@ python app.py
 ```
 > **Note**
 >
-> 为应对知乎最新的验证机制，添加 Cookies 属性，[点击](http://8.130.108.230:5000/get-cookies) 查看如何获取知乎 Cookie。
+> 为应对知乎最新的验证机制，添加 Cookies 属性，[点击](http://127.0.0.1:50000/get-cookies) 查看如何获取知乎 Cookie。
 
 > **Note**
 >

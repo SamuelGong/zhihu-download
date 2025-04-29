@@ -162,4 +162,5 @@ def cleanup_files(paths):
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", debug=False)
+    # app.run(host="0.0.0.0", debug=False)
+    app.run(host="0.0.0.0", port=50000, debug=False)  # Zhifeng changes port from 5000 to 50000
